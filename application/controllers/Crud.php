@@ -48,14 +48,14 @@ class Crud extends CI_Controller {
 
 	public function simpan()
 	{
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('nama','required|alpha');
-		$this->form_validation->set_rules('telp','nomer','required|numeric');
-		if ($this->form_validation->run()==false) 
-		{
+		// $this->load->library('form_validation');
+		// $this->form_validation->set_rules('nama','required|alpha');
+		// $this->form_validation->set_rules('telp','nomer','required|numeric');
+		// if ($this->form_validation->run()==false) 
+		// {
 			$data = array('judul' => 'Tambah Data');
 			$this->load->view('tambah_data', $data);
-		}else{
+		// }else{
 				echo "hal tersimpan";
 
 			$data = array(
@@ -68,7 +68,7 @@ class Crud extends CI_Controller {
 				
 			);
 			$this->mcrud->simpan_data($data);
-		}
+		// }
 }
 
 	public function ubah()

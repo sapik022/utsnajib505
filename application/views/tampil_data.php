@@ -18,37 +18,41 @@
 			<li class="active">Data tables</li>
 		</ol>
         <div class="row">
-
-	<!-- <a href="crud/tambah" class="btn btn-primary">Tambah Data</a> -->
-	<!-- <a href="crud/tampil2" class="btn btn-primary">Riwayat Log</a> -->
-	<table class="table">
-		<thead>
-	<tr>
-		<th>ID</th>
-		<th>Nim</th>
-		<th>Nama</th>
-		<th>Jenis Kelamin</th>
-		<th>Alamat</th>
-		<th>Nomer HP</th>
-		<th>Edit</th>
-		<th>Hapus</th>
-		</tr>
-	</thead>
-		<?php
-		foreach ($isi as $k0 => $v0) {
-		?>
-		<tr>
-			<td><?php echo $v0['idmhs'] ?></td>
-			<td><?php echo $v0['nim'] ?></td>
-			<td><?php echo $v0['nama'] ?></td>
-			<td><?php echo $v0['jenis_kelamin'] ?></td>
-			<td><?php echo $v0['alamat'] ?></td>
-			<td><?php echo $v0['telp'] ?></td>
-			<td><a href='<?php echo "crud/ubah/".$v0["idmhs"] ?>'>ubah<a/></td>
-			<td><a href='<?php echo "crud/hapus/".$v0["idmhs"] ?>'>hapus<a/></td>
-		</tr>
-		<?php } ?>
-</table>
+		<section class="content">
+			<div class="row">
+				<div class="box">
+					<div class="box-header">
+						<a href="crud/tambah" class="btn btn-primary">Tambah Data</a>
+						<!-- <a href="crud/tampil2" class="btn btn-primary">Riwayat Log</a> -->
+						<div class="box-body">
+							<table id="example1" class="table table-bordered table-striped">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Nim</th>
+										<th>Nama</th>
+										<th>Jenis Kelamin</th>
+										<th>Alamat</th>
+										<th>Nomer HP</th>
+										<th>Edit</th>
+										<th>Hapus</th>
+									</tr>
+								</thead>
+								<?php $id=1;
+								foreach ($isi as $k0 => $v0) {
+									?>
+									<tr>
+										<td><?php echo $v0['idmhs'] ?></td>
+										<td><?php echo $v0['nim'] ?></td>
+										<td><?php echo $v0['nama'] ?></td>
+										<td><?php echo $v0['jenis_kelamin'] ?></td>
+										<td><?php echo $v0['alamat'] ?></td>
+										<td><?php echo $v0['telp'] ?></td>
+										<td><a href='<?php echo "crud/ubah/".$v0["idmhs"] ?>'>ubah<a/></td>
+										<td><a href='<?php echo "crud/hapus/".$v0["idmhs"] ?>'>hapus<a/></td>
+									</tr>
+								<?php } ?>
+							</table>
     </section>
     <section class="content container-fluid">
     </section>
